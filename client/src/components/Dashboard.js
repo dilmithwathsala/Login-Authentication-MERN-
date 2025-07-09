@@ -12,7 +12,7 @@ export default function Dashboard() {
         headers: { Authorization: token },
       })
       .then((res) => setData(res.data.msg))
-      .catch((err) => setData(err.response?.data?.msg || "Access denied"));
+      .catch((err) => setData(err.response?.data?.msg || "Access Granted"));
   }, [token]);
 
   const handleLogout = () => {
